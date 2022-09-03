@@ -5,12 +5,12 @@ export default class NavBar extends Component {
         super(props);
 
         this.state = {
-            theme:this.props.theme,
+            theme: this.props.theme,
         };
     }
 
     render() {
-        const classes = "navbar navbar-expand-sm navbar-" + this.props.theme;
+        const classes = "navbar navbar-expand-sm  navbar-" + this.props.theme;
         return (
             <nav className={classes}>
                 <div className="container-fluid px-5">
@@ -78,10 +78,15 @@ export default class NavBar extends Component {
                             </a>
                         </div>
                     </div>
-                    <label className="toggle-control">
-                        <input type="checkbox" onChange={this.props.handleChange}/>
-                        <span className="control" />
-                    </label>
+                    <div className="position-relative">
+                        <label className="toggle-control position-fixed float-end">
+                            <input
+                                type="checkbox"
+                                onChange={this.props.handleChange}
+                            />
+                            <span className="control" />
+                        </label>
+                    </div>
                 </div>
             </nav>
         );

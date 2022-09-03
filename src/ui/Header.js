@@ -13,7 +13,7 @@ export default class Header extends Component {
 
     render() {
         return (
-            <div style={{ minHeight: "100vh" }} className=" ">
+            <div style={{ minHeight: "100vh" }} className=" " id="home">
                 <NavBar handleChange={this.props.handleChange} theme={ this.props.theme} />
                 <div className="row align-items-md-stretch mx-0">
                     <div className="col-md-6">
@@ -37,7 +37,7 @@ export default class Header extends Component {
                         </div>
                     </div>
                     <div className="col-md-6">
-                        <div className="h-100  rounded-3 text-white">
+                        <div className="h-100 py-4 rounded-3 text-white">
                             <img className="card-img" src={img3} alt="Title" />
                         </div>
                     </div>

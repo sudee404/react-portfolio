@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import img1 from "../images/image-01.png";
-import img2 from "../images/image-05.png";
+import Modal from "./Modal";
 
 export default class Card extends Component {
     constructor(props) {
@@ -23,13 +22,15 @@ export default class Card extends Component {
 }
 
 export class CardProduct extends Component {
+    handleClick = () => {}
     render() {
         const { skill, description, image } = this.props.data;
         return (
             <div>
-                <div className="card border-0 shadow-md card1">
+                <div className="card border-0 shadow-md bg-transparent card1">
                     <img src={image} className="card-img-top h-100" alt="..." />
-                    <div className="card-img-overlay over text-center">
+                    <div className="card-img-overlay over text-center" onClick={this.handleClick} style={{ cursor:'pointer'}} data-bs-toggle="modal"
+                    data-bs-target="#modalId">
                         <span className="fw-bolder display-1  p-5">+</span>
                     </div>
                 </div>
@@ -39,6 +40,8 @@ export class CardProduct extends Component {
                         <p className="card-text">{description}</p>
                     </div>
                 </div>
+                <Modal />
+                
             </div>
         );
     }
