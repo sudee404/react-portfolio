@@ -13,49 +13,37 @@ export default class App extends Component {
 
         this.state = {
             classes: "bg-purple-50 text-dark",
-            theme:'light',
+            theme: "light",
         };
     }
-    
-   
 
     handleChange = (e) => {
         const { checked } = e.target;
         if (checked) {
             this.setState({
                 classes: "bg-dark text-light",
-                theme:'dark',
+                theme: "dark",
             });
         } else {
             this.setState({
                 classes: "bg-purple-50 text-dark",
-                theme:'light',
+                theme: "light",
             });
         }
     };
     render() {
         return (
             <div className={this.state.classes}>
-                
-                    <Header handleChange={this.handleChange} theme={ this.state.theme} />
-                    <About />
-                    <Services />
-                    <Portfolio />
-                    <Work />
+                <Header
+                    handleChange={this.handleChange}
+                    theme={this.state.theme}
+                />
+                <About />
+                <Services />
+                <Portfolio />
+                <Work />
                 <Footer />
-                <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <ul class="nav nav-pills">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#fat">@fat</a>
-                    </li>
-                </ul>
-            </nav>
-            <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
-                <h4 id="fat">@fat</h4>
             </div>
-            </div>
-            
         );
     }
 }
