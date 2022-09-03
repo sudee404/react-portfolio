@@ -1,13 +1,180 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.text-purple {
+	color: purple;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.bg-purple {
+	background-color: purple;
+}
+
+.bg-purple-50 {
+	background-color: rgba(71, 4, 71, 0.041);
+}
+
+/* Follow me for more pens like this! */
+.toggle-control {
+	display: block;
+	position: relative;
+	padding-left: 100px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.toggle-control input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+.toggle-control input:checked~.control {
+	background-color: #4314d2;
+}
+
+.toggle-control input:checked~.control::before {
+	background: #4314d2;
+	left: 39px;
+	transform: scale(1);
+}
+
+.toggle-control input:checked~.control::after {
+	background: white;
+	left: 55px;
+}
+
+.toggle-control .control {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 50px;
+	width: 100px;
+	border-radius: 25px;
+	background-color: #62ccff;
+	transition: background-color 0.125s ease-in;
+}
+
+.toggle-control .control::before {
+	content: "";
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 0px;
+	top: 0px;
+	border-radius: 50%;
+	transform: scale(0);
+	background: #62ccff;
+	z-index: 5;
+	transition: all 0.125s ease-in;
+}
+
+.toggle-control .control::after {
+	content: "";
+	position: absolute;
+	left: 5px;
+	top: 5px;
+	width: 40px;
+	height: 40px;
+	border-radius: 25px;
+	background: #fff89e;
+	transition: all 0.125s ease-in;
+}
+
+/* Center the control */
+.icon-body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.centered {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: #222229;
+	color: white;
+}
+
+.over {
+	opacity: 0;
+}
+
+.over:hover {
+	opacity: 1;
+	animation: floatOut 0.3s ease-in 0.1s reverse;
+	background-color: rgba(128, 0, 128, 0.452);
+	box-shadow: black, blue, green, yellow;
+}
+
+/* animations */
+@keyframes floatOut {
+	0% {
+		transform: translateZ(-2px);
+	}
+
+	25% {
+		transform: translateZ(-5px);
+	}
+
+	50% {
+		transform: translateZ(-7px);
+	}
+
+	75% {
+		transform: translateZ(-9px);
+	}
+
+	100% {
+		transform: translateZ(-11px);
+	}
+}
+
+@keyframes floatUp {
+	0% {
+		transform: translateY(-2px);
+	}
+
+	25% {
+		transform: translateY(-5px);
+	}
+
+	50% {
+		transform: translateY(-7px);
+	}
+
+	75% {
+		transform: translateY(-9px);
+	}
+
+	100% {
+		transform: translateY(-11px);
+	}
+}
+
+@keyframes floatIn {
+	0% {
+		transform: scale(1.01);
+	}
+
+	25% {
+		transform: scale(1.02);
+	}
+
+	50% {
+		transform: scale(1.03);
+	}
+
+	75% {
+		transform: scale(1.04);
+		;
+	}
+
+	100% {
+		transform: scale(1.05);
+	}
 }
