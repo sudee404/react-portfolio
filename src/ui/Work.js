@@ -3,7 +3,7 @@ import OwlDemo from "./OwlDemo";
 export default class Work extends Component {
     render() {
         return (
-            <div className="p-lg-5">
+            <div className="p-lg-5 pt-5">
                 <div className="container-fluid py-5 text-center">
                     <h1 className="display-5 fw-bold">Testimonials</h1>
                     <p className="fs-4 ">

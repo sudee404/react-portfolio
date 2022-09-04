@@ -3,9 +3,9 @@ import React, { Component } from "react";
 export default class Footer extends Component {
     render() {
         return (
-            <footer className="footer mt-auto py-3">
-                <div className="container">
-                    <span className="text-muted">
+            <footer className="footer pt-5" style={{minHeight:'100vh'}}>
+                <div className="container pt-5">
+                    <span className="pt-5">
                         <div className="p-lg-5 mb-4 bg-purple text-light rounded-3">
                             <div className="container-fluid py-5 text-center">
                                 <h1

@@ -26,7 +26,7 @@ export default class About extends Component {
                                         University of Kenya. 
                                     </div>
                                     <button
-                                        className="btn bg-purple btn-outline-light btn-md "
+                                        className="btn bg-purple btn-outline-light btn-md m-3"
                                         type="button"
                                     >
                                         Download CV

@@ -43,7 +43,7 @@ export default class Services extends Component {
         );
 
         return (
-            <div className=" bg-purple-50">
+            <div className=" bg-transparent pt-5">
                 <Cover comp={coverText} />
 
                 <div className="row mx-0 d-flex justify-content-center">

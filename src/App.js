@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import About from "./ui/About";
-import Cover from "./ui/Cover";
 import Footer from "./ui/Footer";
 import Header from "./ui/Header";
 import NavBar from "./ui/NavBar";
+import Example from "./ui/Example";
 import Portfolio from "./ui/Portfolio";
 import Services from "./ui/Services";
 import Work from "./ui/Work";
@@ -14,7 +14,7 @@ export default class App extends Component {
         super(props);
 
         this.state = {
-            classes: "bg-purple-50 text-dark",
+            classes: "bg-transparent text-dark",
             theme: "light",
         };
     }
@@ -28,7 +28,7 @@ export default class App extends Component {
             });
         } else {
             this.setState({
-                classes: "bg-purple-50 text-dark",
+                classes: "bg-transparent text-dark",
                 theme: "light",
             });
         }
@@ -38,19 +38,25 @@ export default class App extends Component {
             <Router>
                 <div
                     className={this.state.classes}
-                    style={{ minHeight: "100vh" }}
+                    style={{overflowY: "scroll" }}
                 >
-                    <NavBar
-                        handleChange={this.handleChange}
-                        theme={this.state.theme}
-                    />
+                    <NavBar theme={this.state.theme} />
+                    <div className="position-relative">
+                    <label
+                        className="toggle-control centered"
+                        style={{ zIndex: 1 }}
+                    >
+                        <input type="checkbox" onChange={this.handleChange} />
+                        <span className="control" />
+                    </label>
+                    </div>
                     <Routes>
                         <Route
                             exact
-                            path="/home"
+                            path="/"
                             element={
                                 <div>
-                                    <Header /> <About /> <Services />{" "}
+                                    <Header /> <About /> <Services />
                                     <Portfolio />
                                     <Work />
                                     <Footer />
@@ -97,17 +103,6 @@ export default class App extends Component {
                             }
                         />
                         <Route path="/contact" element={<Footer />} />
-                        <Route
-                            path="/"
-                            element={
-                                <div>
-                                    <Header /> <About /> <Services />{" "}
-                                    <Portfolio />
-                                    <Work />
-                                    <Footer />
-                                </div>
-                            }
-                        />
                     </Routes>
                 </div>
             </Router>

@@ -36,7 +36,7 @@ export default class Portfolio extends Component {
                 );
             });
         return (
-            <div className=" bg-purple-50 ">
+            <div className=" bg-transparent ">
                 <div className="p-lg-5 py-5 mb-4 rounded-3">
                     <div className="container-fluid pt-5">
                         <h1 className="display-5 fw-bold">Portfolio</h1>

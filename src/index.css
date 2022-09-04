@@ -1,13 +1,6 @@
 /* Importing carousel */
 @import "~react-image-gallery/styles/css/image-gallery.css";
-#root {
 
-	overflow-y: auto;
-	/* hide scrollbar for IE, Edge and Firefox */
-	-ms-overflow-style: none;
-	scrollbar-width: 0;
-
-}
 
 .text-purple {
 	color: purple;
@@ -103,12 +96,10 @@
 }
 
 .centered {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	background-color: #222229;
-	color: white;
+	position: fixed;
+	bottom: 30px;
+	right:0;
+	margin: 30px;
 }
 
 .over {

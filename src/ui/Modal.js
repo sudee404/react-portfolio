@@ -13,7 +13,7 @@ export default class Modal extends Component {
                     aria-labelledby="modalTitleId"
                     aria-hidden="true"
                 >
-                    <div className="modal-dialog modal-lg" role="document">
+                    <div className="modal-dialog modal-dialog-centered " role="document">
                         <div className="modal-content">
                         <Carousel/>
                         </div>
