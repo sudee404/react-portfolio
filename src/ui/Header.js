@@ -13,8 +13,8 @@ export default class Header extends Component {
 
     render() {
         return (
-            <div style={{ minHeight: "100vh" }} className=" " id="home">
-                <NavBar handleChange={this.props.handleChange} theme={ this.props.theme} />
+            <div style={{ maxHeight: "100vh" }} className=" " id="home">
+                
                 <div className="row align-items-md-stretch mx-0">
                     <div className="col-md-6">
                         <div className="h-100 p-5 rounded-3">

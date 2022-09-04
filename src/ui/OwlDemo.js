@@ -19,6 +19,7 @@ export class OwlDemo extends Component {
             margin: 10,
             nav: true,
             autoplay: true,
+            rewind: true,
             dots:false,
             responsive: {
                 0: {
@@ -39,7 +40,7 @@ export class OwlDemo extends Component {
                         {images.map((image) => {
                             return (
                                 <div
-                                    className="card m-lg-5 m-2 border-0 shadow-lg bg-transparent rounded-0"
+                                    className="card m-lg-5 m-2 border-0 shadow-lg bg-transparent"
                                     key={image.name}
                                 >
                                     <div className="row g-0 mx-0 d-flex justify-content-center">

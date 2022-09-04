@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export default class NavBar extends Component {
     constructor(props) {
@@ -14,7 +15,7 @@ export default class NavBar extends Component {
         return (
             <nav className={classes}>
                 <div className="container-fluid px-5">
-                    <a className="navbar-brand fs-1 fw-bolder" href="#">
+                    <a className="navbar-brand fs-1 fw-bolder" >
                         SUDI <span className=" text-purple">.</span>
                     </a>
                     <button
@@ -34,52 +35,17 @@ export default class NavBar extends Component {
                         style={{ fontVariant: "small-caps" }}
                     >
                         <div className="navbar-nav">
-                            <a
-                                className="nav-link active"
-                                aria-current="page"
-                                href="#"
-                            >
-                                Home
-                            </a>
-                            <a
-                                className="nav-link"
-                                aria-current="page"
-                                href="#"
-                            >
-                                About
-                            </a>
-                            <a
-                                className="nav-link"
-                                aria-current="page"
-                                href="#"
-                            >
-                                Services
-                            </a>
-                            <a
-                                className="nav-link"
-                                aria-current="page"
-                                href="#"
-                            >
-                                Portfolio
-                            </a>
-                            <a
-                                className="nav-link"
-                                aria-current="page"
-                                href="#"
-                            >
-                                Work
-                            </a>
-                            <a
-                                className="nav-link"
-                                aria-current="page"
-                                href="#"
-                            >
-                                Contact
-                            </a>
+                            
+                            <Link className="nav-link active" to="/">Home</Link>
+                            <Link className="nav-link" to="/about">About</Link>
+                            <Link className="nav-link" to="/services">Services</Link>
+                            <Link className="nav-link" to="/portfolio">Portfolio</Link>
+                            <Link className="nav-link" to="/work">Work</Link>
+                            <Link className="nav-link" to="/contact">Contact</Link>
                         </div>
                     </div>
                     <div className="position-relative">
-                        <label className="toggle-control position-fixed float-end">
+                        <label className="toggle-control position-fixed float-end" style={{ zIndex:1}}>
                             <input
                                 type="checkbox"
                                 onChange={this.props.handleChange}

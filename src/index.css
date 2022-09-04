@@ -1,10 +1,8 @@
 /* Importing carousel */
 @import "~react-image-gallery/styles/css/image-gallery.css";
-
 #root {
 
 	overflow-y: auto;
-
 	/* hide scrollbar for IE, Edge and Firefox */
 	-ms-overflow-style: none;
 	scrollbar-width: 0;
@@ -16,7 +14,7 @@
 }
 
 .bg-purple {
-	background-color: purple;
+	background-color: rgb(78, 3, 78);
 }
 
 .bg-purple-50 {
