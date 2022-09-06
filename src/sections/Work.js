@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import OwlDemo from "./OwlDemo";
+import OwlDemo from "../ui/OwlDemo";
 export default class Work extends Component {
     render() {
         return (

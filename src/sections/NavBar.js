@@ -12,7 +12,7 @@ export default class NavBar extends Component {
 
     render() {
         const classes =
-            "navbar navbar-expand-sm fixed-top shadow-lg navbar-" +
+            "navbar navbar-expand-sm sticky-top shadow-lg navbar-" +
             this.props.theme + " bg-"+this.props.theme;
         return (
             <nav className={classes}>

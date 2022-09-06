@@ -11,7 +11,7 @@ export default class Card extends Component {
         const { skill, description, image } = this.props.data;
         return (
             <div className="card border-0 shadow-md bg-transparent card1">
-                <img src={image} className="card-img-top" alt="..." />
+                <img src={image} className="card-img-top p-5 h-100" alt="..." />
                 <div className="card-body text-center">
                     <h5 className="card-title fw-bold">{skill}</h5>
                     <p className="card-text">{description}</p>
@@ -28,7 +28,7 @@ export class CardProduct extends Component {
         return (
             <div>
                 <div className="card border-0 shadow-md bg-transparent card1">
-                    <img src={image} className="card-img-top h-100" alt="..." />
+                    <img src={image} className="card-img-top h-100 p-5" alt="..." />
                     <div className="card-img-overlay over text-center" onClick={this.handleClick} style={{ cursor:'pointer'}} data-bs-toggle="modal"
                     data-bs-target="#modalId">
                         <span className="fw-bolder display-1  p-5">+</span>

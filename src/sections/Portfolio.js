@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { CardProduct } from "./Card";
+import { CardProduct } from "../ui/Card";
 import git1 from "../images/git1.png";
-import git2 from "../images/git2.png";
 import img1 from "../images/image-04.png";
 import img2 from "../images/image-05.png";
 import img3 from "../images/image-06.png";

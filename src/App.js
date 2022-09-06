@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import About from "./ui/About";
-import Footer from "./ui/Footer";
-import Header from "./ui/Header";
-import NavBar from "./ui/NavBar";
-import Example from "./ui/Example";
-import Portfolio from "./ui/Portfolio";
-import Services from "./ui/Services";
-import Work from "./ui/Work";
+import About from "./sections/About";
+import Footer from "./sections/Footer";
+import Header from "./sections/Header";
+import NavBar from "./sections/NavBar";
+import Portfolio from "./sections/Portfolio";
+import Services from "./sections/Services";
+import Work from "./sections/Work";
 
 export default class App extends Component {
     constructor(props) {
@@ -38,7 +37,6 @@ export default class App extends Component {
             <Router>
                 <div
                     className={this.state.classes}
-                    style={{overflowY: "scroll" }}
                 >
                     <NavBar theme={this.state.theme} />
                     <div className="position-relative">

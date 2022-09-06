@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   myapp:
-    image: portfolio
+    image: mash404/portfolio
     build:
       context: .
       dockerfile: ./Dockerfile
