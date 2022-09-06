@@ -4,7 +4,28 @@ import img2 from "../images/image-02.png";
 import img3 from "../images/image-13.png";
 import Card from "../ui/Card";
 import Cover from "../ui/Cover";
+import axios from 'axios'
 export default class Services extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            data: [],
+        };
+    }
+
+    componentDidMount = () => {
+        
+        const url = "http://localhost:8000/services/"
+        axios.get(url)
+            .then((response) => {
+                this.setState({
+                    data: response.data.results
+                })
+            }).catch((error) => {
+            console.log(error)
+        })
+    };
     render() {
         const skills = [
             "Web Development",
@@ -18,14 +39,20 @@ export default class Services extends Component {
         ];
         const images = [img1, img2, img3];
         const loadServices = () =>
-            skills.map((skill) => {
+            this.state.data.map((skill) => {
                 const data = {
-                    skill: skill,
-                    description: descriptions.at(skills.indexOf(skill)),
-                    image: images.at(skills.indexOf(skill)),
+                    // skill: skill,
+                    // description: descriptions.at(skills.indexOf(skill)),
+                    // image: images.at(skills.indexOf(skill)),
+                    skill: skill.name,
+                    description: skill.description,
+                    image: images.at(this.state.data.indexOf(skill)),
                 };
                 return (
-                    <div className="col-sm-12 col-md-6 col-lg-4 p-lg-5 py-5" key={skill}>
+                    <div
+                        className="col-sm-12 col-md-6 col-lg-4 p-lg-5 py-5"
+                        key={skill}
+                    >
                         <Card data={data} />
                     </div>
                 );
