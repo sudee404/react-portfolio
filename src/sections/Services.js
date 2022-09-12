@@ -4,7 +4,8 @@ import img2 from "../images/image-02.png";
 import img3 from "../images/image-13.png";
 import Card from "../ui/Card";
 import Cover from "../ui/Cover";
-import axios from 'axios'
+import axios from "axios";
+import { Spinner } from "reactstrap";
 export default class Services extends Component {
     constructor(props) {
         super(props);
@@ -15,35 +16,24 @@ export default class Services extends Component {
     }
 
     componentDidMount = () => {
-        
-        const url = "http://localhost:8000/services/"
-        axios.get(url)
+        // const url = "http://localhost:8000/services/";
+        const url1 = "http://ip172-18-0-10-ccf00j8ja8q000am6aag-8000.direct.labs.play-with-docker.com/services/"
+        axios
+            .get(url1)
             .then((response) => {
                 this.setState({
-                    data: response.data.results
-                })
-            }).catch((error) => {
-            console.log(error)
-        })
+                    data: response.data.results,
+                });
+            })
+            .catch((error) => {
+                console.log(error);
+            });
     };
     render() {
-        const skills = [
-            "Web Development",
-            "Android Development",
-            "Data Science",
-        ];
-        const descriptions = [
-            "I can Design,Code,Test and deploy you a website in the shortest time possible",
-            "I can make you an android app with Kotlin. I can also connect it to an existing website",
-            "I can perform EDA, visualisation, regression and classification",
-        ];
         const images = [img1, img2, img3];
         const loadServices = () =>
             this.state.data.map((skill) => {
                 const data = {
-                    // skill: skill,
-                    // description: descriptions.at(skills.indexOf(skill)),
-                    // image: images.at(skills.indexOf(skill)),
                     skill: skill.name,
                     description: skill.description,
                     image: images.at(this.state.data.indexOf(skill)),
@@ -51,7 +41,7 @@ export default class Services extends Component {
                 return (
                     <div
                         className="col-sm-12 col-md-6 col-lg-4 p-lg-5 py-5"
-                        key={skill}
+                        key={data.skill}
                     >
                         <Card data={data} />
                     </div>
@@ -70,11 +60,24 @@ export default class Services extends Component {
         );
 
         return (
-            <div className=" bg-transparent pt-5">
+            <div className="pt-5" style={{ background: this.props.color }}>
                 <Cover comp={coverText} />
 
-                <div className="row mx-0 d-flex justify-content-center">
-                    {loadServices()}
+                <div className="row mx-0 d-flex justify-content-center align-items-center">
+                    {this.state.data.length > 0 ? (
+                        loadServices()
+                    ) : (
+                        <Spinner
+                            type="grow"
+                            style={{
+                                height: "10vh",
+                                width: "10vh",
+                                margin: "10vh",
+                            }}
+                        >
+                            Loading
+                        </Spinner>
+                    )}
                 </div>
             </div>
         );

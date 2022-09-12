@@ -14,86 +14,6 @@
 	background-color: rgba(71, 4, 71, 0.041);
 }
 
-/* Follow me for more pens like this! */
-.toggle-control {
-	display: block;
-	position: relative;
-	padding-left: 100px;
-	margin-bottom: 12px;
-	cursor: pointer;
-	font-size: 22px;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-}
-
-.toggle-control input {
-	position: absolute;
-	opacity: 0;
-	cursor: pointer;
-	height: 0;
-	width: 0;
-}
-
-.toggle-control input:checked~.control {
-	background-color: #4314d2;
-}
-
-.toggle-control input:checked~.control::before {
-	background: #4314d2;
-	left: 39px;
-	transform: scale(1);
-}
-
-.toggle-control input:checked~.control::after {
-	background: white;
-	left: 55px;
-}
-
-.toggle-control .control {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 50px;
-	width: 100px;
-	border-radius: 25px;
-	background-color: #62ccff;
-	transition: background-color 0.125s ease-in;
-}
-
-.toggle-control .control::before {
-	content: "";
-	position: absolute;
-	width: 40px;
-	height: 40px;
-	left: 0px;
-	top: 0px;
-	border-radius: 50%;
-	transform: scale(0);
-	background: #62ccff;
-	z-index: 5;
-	transition: all 0.125s ease-in;
-}
-
-.toggle-control .control::after {
-	content: "";
-	position: absolute;
-	left: 5px;
-	top: 5px;
-	width: 40px;
-	height: 40px;
-	border-radius: 25px;
-	background: #fff89e;
-	transition: all 0.125s ease-in;
-}
-
-/* Center the control */
-.icon-body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
 
 .centered {
 	position: fixed;
@@ -104,6 +24,7 @@
 
 .over {
 	opacity: 0;
+	transition: all 2s;
 }
 
 .over:hover {
@@ -180,8 +101,6 @@
 		transform: scale(1.05);
 	}
 }
-
-/* Footer */
-.footer {
-	min-height: 100vh;
+::-webkit-scrollbar {
+    display: none;
 }

@@ -4,7 +4,7 @@ import img from "../images/image-03.png";
 export default class About extends Component {
     render() {
         return (
-            <div className="row align-items-md-stretch mx-0" style={{minHeight:'100vh'}}>
+            <div className="row align-items-md-stretch mx-0" style={{minHeight:'100vh',background:this.props.color}}>
                 <div className="py-3"></div>
                 <div className="col-md-6">
                     <div className="h-100  rounded-3 text-white">

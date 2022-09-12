@@ -41,7 +41,7 @@ export class OwlDemo extends Component {
                             return (
                                 <div
                                     className="card m-lg-5 m-2 border-0 shadow-lg bg-transparent"
-                                    key={image.name}
+                                    key={image}
                                 >
                                     <div className="row g-0 mx-0 d-flex justify-content-center">
                                         <div className="col-md-4 d-none d-md-block d-lg-block">
