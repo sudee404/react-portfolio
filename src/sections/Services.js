@@ -5,7 +5,7 @@ import img3 from "../images/image-13.png";
 import Card from "../ui/Card";
 import Cover from "../ui/Cover";
 import axios from "axios";
-import { Spinner } from "reactstrap";
+import Loader from "../ui/Loader";
 export default class Services extends Component {
     constructor(props) {
         super(props);
@@ -60,23 +60,15 @@ export default class Services extends Component {
         );
 
         return (
-            <div className="pt-5" style={{ background: this.props.color }}>
+            <div className="pt-5">
                 <Cover comp={coverText} />
 
                 <div className="row mx-0 d-flex justify-content-center align-items-center">
                     {this.state.data.length > 0 ? (
                         loadServices()
                     ) : (
-                        <Spinner
-                            type="grow"
-                            style={{
-                                height: "10vh",
-                                width: "10vh",
-                                margin: "10vh",
-                            }}
-                        >
-                            Loading
-                        </Spinner>
+                        
+                            <Loader/>
                     )}
                 </div>
             </div>

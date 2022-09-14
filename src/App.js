@@ -87,9 +87,9 @@ export default class App extends Component {
                             path="/"
                             element={
                                 <div>
-                                    <Header /> <About color={two} />{" "}
+                                    <Header color={three}/> <About color={three} />{" "}
                                     <Services color={three} />
-                                    <Portfolio color={four} />
+                                    <Portfolio color={four} colors={[one,two,three,four]}/>
                                     <Work />
                                     <Footer />
                                 </div>
@@ -101,7 +101,7 @@ export default class App extends Component {
                                 <div>
                                     <About color={two} />{" "}
                                     <Services color={three} />{" "}
-                                    <Portfolio color={four} />
+                                    <Portfolio color={four} colors={[one,two,three,four]}/>
                                     <Work />
                                     <Footer />
                                 </div>
@@ -112,7 +112,7 @@ export default class App extends Component {
                             element={
                                 <div>
                                     <Services color={three} />{" "}
-                                    <Portfolio color={four} />
+                                    <Portfolio color={four} colors={[one,two,three,four]}/>
                                     <Work />
                                     <Footer />
                                 </div>
@@ -122,7 +122,7 @@ export default class App extends Component {
                             path="/portfolio"
                             element={
                                 <div>
-                                    <Portfolio color={four} />
+                                    <Portfolio color={four} colors={[one,two,three,four]}/>
                                     <Work />
                                     <Footer />
                                 </div>

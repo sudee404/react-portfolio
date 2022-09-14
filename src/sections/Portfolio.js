@@ -1,10 +1,10 @@
 import axios from "axios";
 import React, { Component } from "react";
-import { Spinner } from "reactstrap";
 // import { CardProduct } from "../ui/Card";
 import git1 from "../images/git1.png";
-import { ButtonLink } from "../ui/Button";
+import ButtonLink from "../ui/ButtonLink";
 import { CardProject } from "../ui/Card";
+import { Loader2 } from "../ui/Loader";
 
 export default class Portfolio extends Component {
     constructor(props) {
@@ -45,7 +45,6 @@ export default class Portfolio extends Component {
         return (
             <div
                 className="p-lg-5 py-5"
-                style={{ background: this.props.color }}
             >
                 <div className="container-fluid pt-5">
                     <h1 className="display-5 fw-bold">Portfolio</h1>
@@ -55,34 +54,15 @@ export default class Portfolio extends Component {
                         development. You can clone some and play around with
                         them.
                     </p>
-                    <a
-                        className="btn btn-danger btn-md btn-icon"
-                        href="https://github.com/sudee404"
-                        type="button"
-                    >
-                        <img
-                            src={git1}
-                            className="img-fluid img"
-                            style={{ height: "20px", width: "50px" }}
-                            alt=""
-                        />
-                    </a>
+                   
+                    <ButtonLink text="Github" colors={this.props.colors} link={ "https://github.com/sudee404"} />
                 </div>
                 
                 <div className="row justify-content-center mx-0 card-group">
                     {this.state.data.length > 0 ? (
                         this.loadProjects()
                     ) : (
-                        <Spinner
-                            type="border"
-                            style={{
-                                height: "10vh",
-                                width: "10vh",
-                                margin: "10vh",
-                            }}
-                        >
-                            Loading
-                        </Spinner>
+                            <Loader2 color={this.props.color } />
                     )}
                 </div>
             </div>
