@@ -45,7 +45,7 @@ export default class Portfolio extends Component {
                 <div className="container-fluid py-5">
                     <h1 className="display-5 fw-bold">Portfolio</h1>
                     <p className="col-md-8 fs-4">
-                        The following list displays some of my projects.Some
+                        The following list displays all of my public repositories from github .Some
                         have been completed while others are still in
                         development. You can clone some and play around with
                         them.

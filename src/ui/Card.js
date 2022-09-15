@@ -61,7 +61,7 @@ export class CardProject extends Component {
         const [one, two, three, four] = this.props.colors;
         const Card = styled.div`
             background-color: ${three};
-            border:${two};
+            border: ${two};
             border-radius: 1rem;
             padding: 0;
             margin: 0;
@@ -74,18 +74,21 @@ export class CardProject extends Component {
                 border-radius: 2.5rem 0 2.5rem 0;
             }
         `;
-        const { name, description, language } = this.props.data;
+        const { name, description, language,svn_url } = this.props.data;
         return (
-            <Card className="card p-2">
-                
+            <Card
+                className="card p-2"
+                style={{ cursor: "pointer" }}
+                data-bs-toggle="modal"
+                data-bs-target="#modalId"
+            >
                 <div className="card-body">
                     <h5 className="card-title">{name}</h5>
                     <h6 className="card-subtitle mb-2 text-muted ">
                         {language}
                     </h6>
-                    <p className="card-text">
-                        {description}
-                    </p>
+                    <p className="card-text">{description}</p>
+                    <a className="btn btn-outline-danger" href={svn_url}>Github</a>
                 </div>
             </Card>
         );

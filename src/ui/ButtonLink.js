@@ -88,6 +88,6 @@ export default class ButtonLink extends Component {
                 background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
             }
         `;
-        return <BtnLink>{this.props.text}</BtnLink>;
+        return <a href={this.props.link}><BtnLink>{this.props.text}</BtnLink></a>;
     }
 }
