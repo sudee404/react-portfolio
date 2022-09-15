@@ -20,11 +20,10 @@ export default class Portfolio extends Component {
         this.loadData();
     }
     loadData = async () => {
-        const url1 = "https://api.github.com/users/sudee404/repos";
+        const url = "https://api.github.com/users/sudee404/repos";
         try {
-            const response = await axios.get(url1);
+            const response = await axios.get(url);
             const data = await response.data;
-            console.log(data);
             this.setState({
                 data: data,
             });
@@ -53,7 +52,6 @@ export default class Portfolio extends Component {
 
                     <ButtonLink
                         text="Github"
-                        colors={this.props.colors}
                         link={"https://github.com/sudee404"}
                     />
                 </div>

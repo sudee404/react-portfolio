@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Typewriter from "typewriter-effect";
 import img from "../images/image-05.png";
-import './header.css'
+import ButtonLink from "../ui/ButtonLink";
+import "./header.css";
 
 export default class Header extends Component {
     constructor(props) {
@@ -11,8 +12,11 @@ export default class Header extends Component {
 
     render() {
         return (
-            <div style={{ minHeight: "100vh",position:'relative' }} id="home">
-                <div className="custom-shape-divider-bottom-1663163981" style={{fill: this.props.color}}>
+            <div style={{ minHeight: "100vh", position: "relative" }} id="home">
+                <div
+                    className="custom-shape-divider-bottom-1663163981"
+                    style={{ fill: this.props.color }}
+                >
                     <svg
                         data-name="Layer 1"
                         xmlns="http://www.w3.org/2000/svg"
@@ -36,10 +40,11 @@ export default class Header extends Component {
                     </svg>
                 </div>
 
-                <div className="row align-items-md-stretch mx-0 py-md-5">
+                <div className="row d-flex align-items-center justify-content-center mx-0 py-md-5">
                     <div className="col-md-6 col-sm-12">
                         <div className="p-5 rounded-3">
-                            <div className="py-lg-5"></div>
+                            <div className="py-5"></div>
+                            <div className="py-5 py-lg-0"></div>
                             <h2 className="  display-5 fw-bolder">HELLO</h2>
                             <h2 className="  display-3 fw-bolder">
                                 I AM <span className="text-purple">SUDI</span>
@@ -58,7 +63,7 @@ export default class Header extends Component {
                                             .pauseFor(1000)
                                             .deleteAll()
                                             .typeString(
-                                                "Data Analyst and ML Expert"
+                                                "Data Analyst"
                                             )
                                             .pauseFor(1000)
                                             .deleteAll()
@@ -68,28 +73,19 @@ export default class Header extends Component {
                                 />
                             </div>
                             <div
-                                className="btn-group"
-                                role="group"
-                                aria-label="Basic example"
+                                className="pt-3"
                             >
-                                <button
-                                    className="btn text-purple  btn-outline-light mt-3"
-                                    style={{ borderColor: "purple" }}
-                                    type="button"
-                                >
-                                    Hire Me
-                                </button>
-                                <button
-                                    className="btn text-purple  btn-outline-light mt-3"
-                                    style={{ borderColor: "purple" }}
-                                    type="button"
-                                >
-                                    Resume
-                                </button>
+                                
+                                <ButtonLink
+                                    text="Hire Me"
+                                    link={"https://www.upwork.com/freelancers/~0125f71b5182fcca25"}
+                                />
+                                
+                                
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-6 col-sm-12 pt-3">
+                    <div className="col-md-6 col-sm-12 pt-3 d-none d-md-block d-lg-block  d-xl-block">
                         <div className="pe-lg-5 pe-md-4 pt-3 ">
                             <img className="card-img" src={img} alt="Title" />
                         </div>
