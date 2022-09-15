@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { Component } from "react";
 // import { CardProduct } from "../ui/Card";
-import git1 from "../images/git1.png";
 import ButtonLink from "../ui/ButtonLink";
 import { CardProject } from "../ui/Card";
 import { Loader2 } from "../ui/Loader";

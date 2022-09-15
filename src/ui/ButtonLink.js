@@ -8,10 +8,6 @@ export default class ButtonLink extends Component {
         clickHandler: PropTypes.func,
     };
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         const BtnLink = styled.button`
             text-decoration: none;

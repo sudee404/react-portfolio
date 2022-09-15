@@ -47,6 +47,5 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://sudee404.github.io/react-portfolio",
   "dev": "docker-compose -f docker-compose.dev.yml up"
 }
