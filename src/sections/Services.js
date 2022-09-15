@@ -17,7 +17,7 @@ export default class Services extends Component {
 
     componentDidMount = () => {
         // const url = "http://localhost:8000/services/";
-        const url1 = "http://ip172-18-0-10-ccf00j8ja8q000am6aag-8000.direct.labs.play-with-docker.com/services/"
+        const url1 = "http://ip172-18-0-165-cchh93oja8q0008hns30-8000.direct.labs.play-with-docker.com/services/"
         axios
             .get(url1)
             .then((response) => {

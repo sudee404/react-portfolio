@@ -23,7 +23,7 @@ export default class Portfolio extends Component {
     loadData = async () => {
         // const url = "http://localhost:8000/projects/";
         const url1 =
-            "http://ip172-18-0-10-ccf00j8ja8q000am6aag-8000.direct.labs.play-with-docker.com/projects/";
+            "http://ip172-18-0-165-cchh93oja8q0008hns30-8000.direct.labs.play-with-docker.com/projects/";
         try {
             const response = await axios.get(url1);
             const data = await response.data;
