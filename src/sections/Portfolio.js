@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { Component } from "react";
-// import { CardProduct } from "../ui/Card";
 import ButtonLink from "../ui/ButtonLink";
 import { CardProject } from "../ui/Card";
 import { Loader2 } from "../ui/Loader";
@@ -21,15 +20,13 @@ export default class Portfolio extends Component {
         this.loadData();
     }
     loadData = async () => {
-        // const url = "http://localhost:8000/projects/";
-        const url1 =
-            "http://ip172-18-0-165-cchh93oja8q0008hns30-8000.direct.labs.play-with-docker.com/projects/";
+        const url1 = "https://api.github.com/users/sudee404/repos";
         try {
             const response = await axios.get(url1);
             const data = await response.data;
+            console.log(data);
             this.setState({
-                data: data.results,
-                labels: data.results,
+                data: data,
             });
         } catch (error) {
             console.log(error);
@@ -37,15 +34,15 @@ export default class Portfolio extends Component {
     };
     loadProjects = () =>
         this.state.data.map((item) => (
-            <CardProject data={item} key={item.url} />
+            <div key={item.url} className="col-lg-4 col-md-6 col-sm-12 p-3">
+                <CardProject data={item} colors={this.props.colors} />
+            </div>
         ));
 
     render() {
         return (
-            <div
-                className="p-lg-5 py-5"
-            >
-                <div className="container-fluid pt-5">
+            <div className="p-lg-5 py-5">
+                <div className="container-fluid py-5">
                     <h1 className="display-5 fw-bold">Portfolio</h1>
                     <p className="col-md-8 fs-4">
                         The following list displays some of my projects.Some
@@ -53,15 +50,19 @@ export default class Portfolio extends Component {
                         development. You can clone some and play around with
                         them.
                     </p>
-                   
-                    <ButtonLink text="Github" colors={this.props.colors} link={ "https://github.com/sudee404"} />
+
+                    <ButtonLink
+                        text="Github"
+                        colors={this.props.colors}
+                        link={"https://github.com/sudee404"}
+                    />
                 </div>
-                
-                <div className="row justify-content-center mx-0 card-group">
+
+                <div className="row d-flex justify-content-center mx-0 g-3 mt-5">
                     {this.state.data.length > 0 ? (
                         this.loadProjects()
                     ) : (
-                            <Loader2 color={this.props.color } />
+                        <Loader2 color={this.props.color} />
                     )}
                 </div>
             </div>
