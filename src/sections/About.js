@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ButtonLink from "../ui/ButtonLink";
 import img from "../images/image-03.png";
 import "./about.css";
 
@@ -54,12 +55,10 @@ export default class About extends Component {
                                             Technology student at Multimedia
                                             University of Kenya.
                                         </div>
-                                        <button
-                                            className="btn bg-purple btn-outline-light btn-md m-3"
-                                            type="button"
-                                        >
-                                            Download CV
-                                        </button>
+                                        
+                                        <div className="my-5 me-5 position-relative">
+                                        <ButtonLink text="Resume" link="https://drive.google.com/file/d/1hQ0YH-g1z9-HsUANm6bZ39IToNrPMtKp/view?usp=sharing"/>
+                                       </div>
                                     </div>
                                 </div>
                             </div>
