@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import OwlDemo from "../ui/OwlDemo";
 export default class Testimonials extends Component {
     render() {
         return (
@@ -11,6 +12,7 @@ export default class Testimonials extends Component {
                     </p>
                     {/* <div className="text-center me-5 pe-5 py-2"><ButtonLink text="Leave a Review"/></div> */}
                 </div>
+                <OwlDemo />
             </div>
         );
     }
