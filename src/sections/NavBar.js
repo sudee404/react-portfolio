@@ -95,6 +95,7 @@ export default class NavBar extends Component {
                                         Services
                                     </Link>
                                 </li>
+                                
                                 <li
                                     className="nav-item"
                                     data-bs-dismiss="offcanvas"
@@ -107,15 +108,23 @@ export default class NavBar extends Component {
                                     className="nav-item"
                                     data-bs-dismiss="offcanvas"
                                 >
+                                    <Link className="nav-link" to="/skills">
+                                        Skills
+                                    </Link>
+                                </li>
+                                <li
+                                    className="nav-item"
+                                    data-bs-dismiss="offcanvas"
+                                >
                                     <Link className="nav-link" to="/work">
                                         Testimonials
                                     </Link>
                                 </li>
-                                {/* <li className="nav-item" data-bs-dismiss="offcanvas">
+                                <li className="nav-item" data-bs-dismiss="offcanvas">
                                     <Link className="nav-link" to="/contact">
                                         Contact
                                     </Link>
-                                </li> */}
+                                </li>
                             </ul>
 
                             {!this.state.light && (

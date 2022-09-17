@@ -33,7 +33,7 @@ export default class About extends Component {
                         />
                     </svg>
                 </div>
-                
+
                 <div className="row align-items-md-stretch mx-0">
                     <div className="py-5"></div>
                     <div className="py-5"></div>
@@ -51,14 +51,23 @@ export default class About extends Component {
                                             About Me
                                         </h1>
                                         <div className="p-lg-3">
-                                            I am Sudi Abdalla , a Computer
-                                            Technology student at Multimedia
-                                            University of Kenya.
+                                            My name is Sudi Abdalla , I'm a
+                                            Computer Technology student at
+                                            Multimedia University of Kenya.
+                                            <br />
+                                            <span className="fw-bold text-success">
+                                                {new Date().getUTCFullYear() -
+                                                    2000}
+                                            </span>{" "}
+                                            year old Male.
                                         </div>
-                                        
+
                                         <div className="my-5 me-5 position-relative">
-                                        <ButtonLink text="Resume" link="https://drive.google.com/file/d/1hQ0YH-g1z9-HsUANm6bZ39IToNrPMtKp/view?usp=sharing"/>
-                                       </div>
+                                            <ButtonLink
+                                                text="Resume"
+                                                link="https://drive.google.com/file/d/1hQ0YH-g1z9-HsUANm6bZ39IToNrPMtKp/view?usp=sharing"
+                                            />
+                                        </div>
                                     </div>
                                 </div>
                             </div>

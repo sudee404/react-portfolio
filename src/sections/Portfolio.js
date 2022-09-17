@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import ButtonLink from "../ui/ButtonLink";
 import { CardProject } from "../ui/Card";
 import { Loader2 } from "../ui/Loader";
+import TabDemo from "../ui/TabDemo";
 
 export default class Portfolio extends Component {
     constructor(props) {
@@ -55,6 +56,8 @@ export default class Portfolio extends Component {
                         link={"https://github.com/sudee404"}
                     />
                 </div>
+                <div className="py-5"></div>
+                <TabDemo selected={1} data={'' } />
 
                 <div className="row d-flex justify-content-center mx-0 g-3 mt-5">
                     {this.state.data.length > 0 ? (

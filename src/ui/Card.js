@@ -3,11 +3,6 @@ import styled from "styled-components";
 import Modal from "./Modal";
 
 export default class Card extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {};
-    }
     render() {
         const { skill, description, image } = this.props.data;
         return (
@@ -85,10 +80,7 @@ export class CardProject extends Component {
             this.props.data;
 
         return (
-            <Card
-                className="card p-2"
-                style={{ cursor: "pointer" }}
-            >
+            <Card className="card p-2" style={{ cursor: "pointer" }}>
                 <div className="card-body">
                     <h5 className="card-title">{name}</h5>
                     <h6 className="card-subtitle mb-2 text-muted ">
@@ -126,6 +118,16 @@ export class CardProject extends Component {
                     )}
                 </div>
             </Card>
+        );
+    }
+}
+export class CardTestimony extends Component {
+    render() {
+        // const handleHover = (e) => console.log(e.target);
+        return (
+            <div className="p-5">
+                card
+            </div>
         );
     }
 }

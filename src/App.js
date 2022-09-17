@@ -5,6 +5,7 @@ import Footer from "./sections/Footer";
 import Header from "./sections/Header";
 import NavBar from "./sections/NavBar";
 import Portfolio from "./sections/Portfolio";
+import Qualifications from "./sections/Qualifications";
 import Services from "./sections/Services";
 import Work from "./sections/Work";
 
@@ -90,6 +91,7 @@ export default class App extends Component {
                                     <Header color={three}/> <About color={three} />{" "}
                                     <Services color={three} />
                                     <Portfolio color={four} colors={[one,two,three,four]}/>
+                                    <Qualifications colors={[one,two,three,four]}/>
                                     <Work />
                                     <Footer />
                                 </div>
@@ -102,6 +104,7 @@ export default class App extends Component {
                                     <About color={two} />{" "}
                                     <Services color={three} />{" "}
                                     <Portfolio color={four} colors={[one,two,three,four]}/>
+                                    <Qualifications colors={[one,two,three,four]}/>
                                     <Work />
                                     <Footer />
                                 </div>
@@ -113,6 +116,7 @@ export default class App extends Component {
                                 <div>
                                     <Services color={three} />{" "}
                                     <Portfolio color={four} colors={[one,two,three,four]}/>
+                                    <Qualifications colors={[one,two,three,four]}/>
                                     <Work />
                                     <Footer />
                                 </div>
@@ -123,6 +127,17 @@ export default class App extends Component {
                             element={
                                 <div>
                                     <Portfolio color={four} colors={[one,two,three,four]}/>
+                                    <Qualifications colors={[one,two,three,four]}/>
+                                    <Work />
+                                    <Footer />
+                                </div>
+                            }
+                        />
+                        <Route
+                            path="/skills"
+                            element={
+                                <div>
+                                    <Qualifications colors={[one,two,three,four]}/>
                                     <Work />
                                     <Footer />
                                 </div>
