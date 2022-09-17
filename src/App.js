@@ -7,7 +7,7 @@ import NavBar from "./sections/NavBar";
 import Portfolio from "./sections/Portfolio";
 import Qualifications from "./sections/Qualifications";
 import Services from "./sections/Services";
-import Work from "./sections/Work";
+import Testimonials from "./sections/Testimonials";
 
 export default class App extends Component {
     constructor(props) {
@@ -92,7 +92,7 @@ export default class App extends Component {
                                     <Services color={three} />
                                     <Portfolio color={four} colors={[one,two,three,four]}/>
                                     <Qualifications colors={[one,two,three,four]}/>
-                                    <Work />
+                                    <Testimonials />
                                     <Footer />
                                 </div>
                             }
@@ -105,7 +105,7 @@ export default class App extends Component {
                                     <Services color={three} />{" "}
                                     <Portfolio color={four} colors={[one,two,three,four]}/>
                                     <Qualifications colors={[one,two,three,four]}/>
-                                    <Work />
+                                    <Testimonials />
                                     <Footer />
                                 </div>
                             }
@@ -117,7 +117,7 @@ export default class App extends Component {
                                     <Services color={three} />{" "}
                                     <Portfolio color={four} colors={[one,two,three,four]}/>
                                     <Qualifications colors={[one,two,three,four]}/>
-                                    <Work />
+                                    <Testimonials />
                                     <Footer />
                                 </div>
                             }
@@ -128,7 +128,7 @@ export default class App extends Component {
                                 <div>
                                     <Portfolio color={four} colors={[one,two,three,four]}/>
                                     <Qualifications colors={[one,two,three,four]}/>
-                                    <Work />
+                                    <Testimonials />
                                     <Footer />
                                 </div>
                             }
@@ -138,7 +138,7 @@ export default class App extends Component {
                             element={
                                 <div>
                                     <Qualifications colors={[one,two,three,four]}/>
-                                    <Work />
+                                    <Testimonials />
                                     <Footer />
                                 </div>
                             }
@@ -147,7 +147,7 @@ export default class App extends Component {
                             path="/work"
                             element={
                                 <div>
-                                    <Work />
+                                    <Testimonials />
                                     <Footer />
                                 </div>
                             }

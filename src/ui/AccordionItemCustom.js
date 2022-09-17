@@ -1,8 +1,7 @@
 import React from "react";
-import { AccordionBody, AccordionHeader, AccordionItem } from "reactstrap";
-/**
- *
- */
+import { AccordionBody, AccordionHeader, AccordionItem} from "reactstrap";
+import TableDemo from "./TableDemo";
+
 class AccordionItemCustom extends React.Component {
     constructor(props) {
         super(props);
@@ -28,15 +27,12 @@ class AccordionItemCustom extends React.Component {
                         farmiliar with. Some were taken as Units for my course,
                         while others I picked up along the way.
                     </strong>
-                    You can modify any of this with custom CSS or overriding our
-                    default variables. It's also worth noting that just about
-                    any HTML can go within the <code>.accordion-body</code>,
-                    though the transition does limit overflow.
+                    
+                    <TableDemo data={ this.props.data} />
                 </AccordionBody>
             </AccordionItem>
         );
     }
 }
-
 
 export default AccordionItemCustom;

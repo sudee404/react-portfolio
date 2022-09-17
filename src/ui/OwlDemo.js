@@ -20,7 +20,7 @@ export class OwlDemo extends Component {
             nav: true,
             autoplay: true,
             rewind: true,
-            dots:false,
+            dots: false,
             responsive: {
                 0: {
                     items: 1,
@@ -37,36 +37,27 @@ export class OwlDemo extends Component {
             <div>
                 <div className="container-fluid bg-transparent p-3">
                     <OwlCarousel {...options} className="bg-transparent">
-                        {images.map((image) => {
+                        {images.map((image, id) => {
                             return (
                                 <div
                                     className="card m-lg-5 m-2 border-0 shadow-lg bg-transparent"
-                                    key={image}
+                                    key={id}
                                 >
                                     <div className="row g-0 mx-0 d-flex justify-content-center">
-                                        <div className="col-md-4 d-none d-md-block d-lg-block">
-                                            <img
-                                                src={image}
-                                                className="img-fluid p-2"
-                                                alt="..."
-                                            />
-                                        </div>
-                                        <div className="col-md-8">
+                                        <div className="col-md-12 text-center">
                                             <div className="card-body">
                                                 <h5 className="card-title">
-                                                    John Doe
+                                                    Moirraine Ae Sedai
                                                 </h5>
                                                 <p className="card-text">
-                                                    This is a wider card with
-                                                    supporting text below as a
-                                                    natural lead-in to
-                                                    additional content. This
-                                                    content is a little bit
-                                                    longer.
+                                                    Wouldn't it be nice if this
+                                                    was a review given by you.
+                                                    Knowing well the job done
+                                                    was money well spent
                                                 </p>
                                                 <p className="card-text">
                                                     <small className="text-muted">
-                                                        Last updated 3 mins ago
+                                                        Posted 3 days ago
                                                     </small>
                                                 </p>
                                             </div>

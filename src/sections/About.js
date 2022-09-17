@@ -53,7 +53,7 @@ export default class About extends Component {
                                         <div className="p-lg-3">
                                             My name is Sudi Abdalla , I'm a
                                             Computer Technology student at <br/>
-                                            <span className="text-info fw-bold">Multimedia University of Kenya</span>.
+                                            <a className="text-info fw-bold" href="https://mmu.ac.ke">Multimedia University of Kenya</a>.
                                             <br />I was born on April 8th
                                             2000. I'm passionate about <span className="text-success">coding</span> and
                                             I enjoy watching <span className="text-danger">anime</span>
