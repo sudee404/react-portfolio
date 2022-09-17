@@ -11,7 +11,7 @@ class AccordionItemCustom extends React.Component {
     }
 
     render() {
-        const [one,two, three, four] = this.props.colors;
+        const [two] = this.props.colors;
         const skill = this.props.skill;
         const id = this.props.id.toString();
         return (
