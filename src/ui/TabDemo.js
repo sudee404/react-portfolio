@@ -1,15 +1,8 @@
 import React from "react";
 
 class TabDemo extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            selected: props.selected,
-        };
-    }
-    toggleHeader = (id) => {
-        this.setState({ selected: id });
+    toggleHeader = async (id) => {
+        return await this.props.toggleData(id);
     };
     button = (text, id) => {
         const selectedClass = "btn btn-default rounded-0 btn-primary col m-0";
@@ -18,7 +11,7 @@ class TabDemo extends React.Component {
         return (
             <button
                 className={
-                    this.state.selected === id ? selectedClass : unSelectedClass
+                    this.props.selected === id ? selectedClass : unSelectedClass
                 }
                 onClick={this.toggleHeader.bind(this, id)}
                 key={id}
@@ -41,9 +34,6 @@ class TabDemo extends React.Component {
                 <div className="card bg-transparent border-0 rounded-0 container-fluid m-0">
                     <div className="card-header row mx-0 p-0">
                         {categories.map((text, id) => this.button(text, id))}
-                    </div>
-                    <div className="card-body">
-                        {}
                     </div>
                 </div>
             </div>

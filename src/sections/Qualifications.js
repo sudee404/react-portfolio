@@ -25,13 +25,14 @@ export default class Qualifications extends Component {
                     </p>
                 </div>
                 <UncontrolledAccordion
-                    
-                    defaultOpen="1"
+                    open="0"
+                    defaultOpen="0"
                     className="shadow-lg rounded"
                     style={{backgroundColor:three}}
                 >
                     {qualifications.map((skill, id) => (
                         <AccordionItemCustom
+                            
                             skill={skill}
                             id={id}
                             key={id}

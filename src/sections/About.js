@@ -52,14 +52,11 @@ export default class About extends Component {
                                         </h1>
                                         <div className="p-lg-3">
                                             My name is Sudi Abdalla , I'm a
-                                            Computer Technology student at
-                                            Multimedia University of Kenya.
-                                            <br />
-                                            <span className="fw-bold text-success">
-                                                {new Date().getUTCFullYear() -
-                                                    2000}
-                                            </span>{" "}
-                                            year old Male.
+                                            Computer Technology student at <br/>
+                                            <span className="text-info fw-bold">Multimedia University of Kenya</span>.
+                                            <br />I was born on April 8th
+                                            2000. I'm passionate about <span className="text-success">coding</span> and
+                                            I enjoy watching <span className="text-danger">anime</span>
                                         </div>
 
                                         <div className="my-5 me-5 position-relative">
