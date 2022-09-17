@@ -72,6 +72,7 @@ export default class Portfolio extends Component {
                 <TabDemo
                     selected={this.state.selected}
                     toggleData={this.toggleData}
+                    colors={this.props.colors}
                 />
 
                 <div className="row d-flex justify-content-center mx-0 g-3 mt-2">

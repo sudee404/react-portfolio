@@ -3,11 +3,7 @@ import styled from "styled-components";
 import img from "../images/image-00.jpg";
 
 export default class Cover extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {};
-    }
+    
 
     render() {
         const Cover = styled.div`

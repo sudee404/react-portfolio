@@ -17,7 +17,7 @@ export default class Qualifications extends Component {
                 { name: "Android with Kotlin", issuer: "--------", level: 60 },
             ],
             [
-                { name: "Data Science", issuer: "Sololearn", level: 60 },
+                { name: "Data Science", issuer: "Sololearn", level: 70 },
                 { name: "Pandas", issuer: "Kaggle", level: 70 },
                 { name: "Machine Learning", issuer: "Kaggle", level: 60 },
                 { name: "Data Visualisation", issuer: "Kaggle", level: 80 },
@@ -33,14 +33,12 @@ export default class Qualifications extends Component {
                     issuer: "Coursera",
                     level: 70,
                 },
-                { name: "AWS S3 Basics", issuer: "Coursera", level: 40 },
+                { name: "AWS S3 Basics", issuer: "Coursera", level: 80 },
             ],
         ];
-        const [two, three] = this.props.colors;
         return (
             <div
                 className="p-lg-5 p-2 mb-4 rounded-3"
-                style={{ backgroundColor: two }}
             >
                 <div className="container-fluid py-5">
                     <h1 className="display-5 fw-bold">
@@ -60,7 +58,6 @@ export default class Qualifications extends Component {
                     open="0"
                     defaultOpen="0"
                     className="shadow-lg rounded"
-                    style={{ backgroundColor: three }}
                 >
                     {qualifications.map((skill, id) => (
                         <AccordionItemCustom

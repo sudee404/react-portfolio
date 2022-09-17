@@ -18,7 +18,7 @@ export default class App extends Component {
             theme: "light",
             light: true,
             navStick: false,
-            prevPosition:0,
+            prevPosition: 0,
         };
     }
     componentDidMount = () => {
@@ -26,11 +26,11 @@ export default class App extends Component {
     };
     handleScroll = (event) => {
         if (window.scrollY > this.state.prevPosition) {
-            this.setState({navStick:false})
-        }else {
-            this.setState({navStick:true})
+            this.setState({ navStick: false });
+        } else {
+            this.setState({ navStick: true });
         }
-        this.setState({prevPosition:window.scrollY})
+        this.setState({ prevPosition: window.scrollY });
     };
     componentWillUnmount = () => {
         window.removeEventListener("scroll", this.handleScroll);
@@ -57,22 +57,26 @@ export default class App extends Component {
             two: "rgb(15, 52, 96)",
             three: "rgb(83, 52, 131)",
             four: "rgb(233, 69, 96)",
+            five: "text-light",
         };
         let lightPalette = {
             one: "rgb(227, 253, 253)",
             two: "rgb(203, 241, 245)",
             three: "rgb(166, 227, 233)",
             four: "rgb(113, 201, 206)",
+            five: "text-dark",
         };
-        const { one, two, three, four } = this.state.light
+        const { one, two, three, four ,five} = this.state.light
             ? lightPalette
             : nightPalette;
+
+        const colors = [one, two, three, four,five];
 
         return (
             <Router>
                 <div
                     className={this.state.classes}
-                    style={{ background: one, color: two ,minHeight:'100vh'}}
+                    style={{ background: one, color: two, minHeight: "100vh" }}
                 >
                     <NavBar
                         theme={this.state.theme}
@@ -88,10 +92,16 @@ export default class App extends Component {
                             path="/"
                             element={
                                 <div>
-                                    <Header color={three}/> <About color={three} />{" "}
+                                    <Header color={three} />{" "}
+                                    <About color={three} />{" "}
                                     <Services color={three} />
-                                    <Portfolio color={four} colors={[one,two,three,four]}/>
-                                    <Qualifications colors={[one,two,three,four]}/>
+                                    <Portfolio
+                                        color={four}
+                                        colors={colors}
+                                    />
+                                    <Qualifications
+                                        colors={colors}
+                                    />
                                     <Testimonials />
                                     <Footer />
                                 </div>
@@ -103,8 +113,13 @@ export default class App extends Component {
                                 <div>
                                     <About color={two} />{" "}
                                     <Services color={three} />{" "}
-                                    <Portfolio color={four} colors={[one,two,three,four]}/>
-                                    <Qualifications colors={[one,two,three,four]}/>
+                                    <Portfolio
+                                        color={four}
+                                        colors={colors}
+                                    />
+                                    <Qualifications
+                                        colors={colors}
+                                    />
                                     <Testimonials />
                                     <Footer />
                                 </div>
@@ -115,8 +130,13 @@ export default class App extends Component {
                             element={
                                 <div>
                                     <Services color={three} />{" "}
-                                    <Portfolio color={four} colors={[one,two,three,four]}/>
-                                    <Qualifications colors={[one,two,three,four]}/>
+                                    <Portfolio
+                                        color={four}
+                                        colors={colors}
+                                    />
+                                    <Qualifications
+                                        colors={colors}
+                                    />
                                     <Testimonials />
                                     <Footer />
                                 </div>
@@ -126,8 +146,13 @@ export default class App extends Component {
                             path="/portfolio"
                             element={
                                 <div>
-                                    <Portfolio color={four} colors={[one,two,three,four]}/>
-                                    <Qualifications colors={[one,two,three,four]}/>
+                                    <Portfolio
+                                        color={four}
+                                        colors={colors}
+                                    />
+                                    <Qualifications
+                                        colors={colors}
+                                    />
                                     <Testimonials />
                                     <Footer />
                                 </div>
@@ -137,7 +162,9 @@ export default class App extends Component {
                             path="/skills"
                             element={
                                 <div>
-                                    <Qualifications colors={[one,two,three,four]}/>
+                                    <Qualifications
+                                        colors={colors}
+                                    />
                                     <Testimonials />
                                     <Footer />
                                 </div>

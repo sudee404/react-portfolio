@@ -1,16 +1,10 @@
 import React from "react";
-import { AccordionBody, AccordionHeader, AccordionItem} from "reactstrap";
+import { AccordionBody, AccordionHeader, AccordionItem } from "reactstrap";
 import TableDemo from "./TableDemo";
 
 class AccordionItemCustom extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {};
-    }
-
     render() {
-        const [two] = this.props.colors;
+        const two = this.props.colors[0];
         const skill = this.props.skill;
         const id = this.props.id.toString();
         return (
@@ -22,13 +16,7 @@ class AccordionItemCustom extends React.Component {
                     <div className="fw-bolder">{skill}</div>
                 </AccordionHeader>
                 <AccordionBody accordionId={id}>
-                    <strong>
-                        This basically entails all programming languages I am
-                        farmiliar with. Some were taken as Units for my course,
-                        while others I picked up along the way.
-                    </strong>
-                    
-                    <TableDemo data={ this.props.data} />
+                    <TableDemo data={this.props.data} colors={ this.props.colors} />
                 </AccordionBody>
             </AccordionItem>
         );
