@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import img1 from "../images/image-08.png";
-import img2 from "../images/image-02.png";
+import img2 from "../images/image-12.png";
 import img3 from "../images/image-13.png";
 import Card from "../ui/Card";
 import Loader from "../ui/Loader";
